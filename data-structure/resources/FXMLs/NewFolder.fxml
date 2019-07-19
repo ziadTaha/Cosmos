@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="240.0" prefWidth="240.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="eg.edu.alexu.csd.datastructure.mailServer.cs04_cs06_cs19.controllers.NewFolderController">
+   <children>
+      <Label layoutX="43.0" layoutY="40.0" style="-fx-font-family: UniSansRegular; -fx-font-style: italic; -fx-font-size: 20;" text="new folder name:" />
+      <TextField fx:id="folderName" layoutX="27.0" layoutY="89.0" />
+      <Button fx:id="create" layoutX="88.0" layoutY="148.0" mnemonicParsing="false" onAction="#createNewFolder" style="-fx-background-color: #336dcc; -fx-text-fill: white; -fx-font-family: UniSansRegular; -fx-font-style: italic;" text="create" />
+   </children>
+</AnchorPane>

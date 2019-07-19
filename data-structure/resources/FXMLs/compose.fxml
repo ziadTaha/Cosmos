@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eg.edu.alexu.csd.datastructure.mailServer.cs04_cs06_cs19.controllers.ComposeController">
+    <children>
+        <ImageView fitHeight="564.0" fitWidth="879.0">
+            <image>
+                <Image url="@../pix/damn.jpg" />
+            </image>
+        </ImageView>
+        <Region prefHeight="32.0" prefWidth="854.0" />
+        <HBox layoutY="32.0" prefHeight="70.0" prefWidth="854.0">
+            <children>
+                <Region prefHeight="70.0" prefWidth="263.0" />
+                <Region prefHeight="70.0" prefWidth="377.0" />
+                <VBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="171.0">
+                    <children>
+                        <Label fx:id="name" prefHeight="39.0" prefWidth="161.0">
+                            <font>
+                                <Font name="Star Jedi" size="19.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="signoutButton" mnemonicParsing="false" onAction="#signout" prefHeight="28.0" prefWidth="132.0" style="-fx-background-color: #da2f38;" text="Sign out" textFill="WHITE">
+                            <font>
+                                <Font name="Uni Sans Heavy Italic" size="12.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </VBox>
+                <Region prefHeight="70.0" prefWidth="43.0" />
+            </children>
+        </HBox>
+        <VBox alignment="TOP_RIGHT" layoutX="263.0" layoutY="150.0" prefHeight="413.0" prefWidth="616.0">
+            <children>
+                <HBox prefHeight="24.0" prefWidth="616.0">
+                    <children>
+                        <Label disable="true" prefHeight="34.0" prefWidth="90.0" text="To:">
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="17.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="to" prefHeight="34.0" prefWidth="452.0" style="-fx-border-width: 0; -fx-border-style: none;">
+                            <padding>
+                                <Insets bottom="-5.0" top="-5.0" />
+                            </padding>
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+                <Separator prefWidth="200.0" style="-fx-background-color: #da2f38;" />
+                <HBox prefHeight="24.0" prefWidth="616.0">
+                    <children>
+                        <Label disable="true" prefHeight="34.0" prefWidth="90.0" text="Subject:">
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="17.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="subjekt" prefHeight="34.0" prefWidth="453.0" style="-fx-border-width: 0; -fx-border-style: none;">
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="-5.0" top="-5.0" />
+                            </padding>
+                        </TextField>
+                    </children>
+                </HBox>
+                <Separator opacity="0.15" prefHeight="18.0" prefWidth="616.0" style="-fx-background-color: #da2f38;" />
+                <Group>
+                    <children>
+                        <TextArea fx:id="mesg" prefHeight="250.0" prefWidth="616.0" promptText="Write your message here">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </TextArea>
+                    </children>
+                </Group>
+                <HBox fx:id="attachmentsH" prefHeight="33.0" prefWidth="616.0">
+                    <children>
+                  <ImageView fx:id="attach" fitHeight="33.0" fitWidth="33.0" onMouseClicked="#addAttachment">
+                     <image>
+                        <Image url="@../pix/Graphicloads-100-Flat-Attach-2.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ComboBox fx:id="attachments" prefWidth="150.0" />
+                  <ImageView fx:id="delete" fitHeight="34.0" fitWidth="42.0" onMouseClicked="#deleteAttachments" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pix/Graphicloads-100-Flat-Recyclebin.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </HBox>
+                <Button fx:id="send" mnemonicParsing="false" onAction="#sent" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #da2f38;" text="Send" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets right="10.0" top="4.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="Uni Sans Heavy Italic" size="12.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </VBox>
+        <HBox layoutX="263.0" layoutY="102.0" prefHeight="39.0" prefWidth="616.0">
+            <children>
+                <Button fx:id="back" mnemonicParsing="false" onAction="#bak" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #da2f38;" text="Back" textFill="WHITE">
+                    <font>
+                        <Font name="Uni Sans Heavy Italic" size="12.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+            <ImageView fx:id="drft" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#draft">
+               <image>
+                  <Image url="@../pix/Graphicloads-100-Flat-Pencil.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </ImageView>
+            </children>
+        </HBox>
+        <Separator layoutX="263.0" layoutY="135.0" prefHeight="21.0" prefWidth="616.0" />
+    </children>
+</AnchorPane>

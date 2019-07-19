@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eg.edu.alexu.csd.datastructure.mailServer.cs04_cs06_cs19.controllers.OpenMailController">
+    <children>
+        <ImageView fitHeight="564.0" fitWidth="879.0">
+            <image>
+                <Image url="@../pix/damn.jpg" />
+            </image>
+        </ImageView>
+        <Region layoutX="519.0" layoutY="144.0" prefHeight="39.0" prefWidth="181.0" />
+        <HBox layoutY="32.0" prefHeight="70.0" prefWidth="854.0">
+            <children>
+                <Region prefHeight="70.0" prefWidth="263.0" />
+                <Region prefHeight="70.0" prefWidth="377.0" />
+                <VBox alignment="TOP_CENTER" prefHeight="70.0" prefWidth="171.0">
+                    <children>
+                        <Label fx:id="name" prefHeight="39.0" prefWidth="161.0">
+                            <font>
+                                <Font name="Star Jedi" size="19.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="signoutButton" mnemonicParsing="false" onAction="#signout" prefHeight="28.0" prefWidth="132.0" style="-fx-background-color: #da2f38;" text="Sign out" textFill="WHITE">
+                            <font>
+                                <Font name="Uni Sans Heavy Italic" size="12.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </VBox>
+                <Region prefHeight="70.0" prefWidth="43.0" />
+            </children>
+        </HBox>
+        <VBox alignment="TOP_CENTER" layoutY="102.0" prefHeight="462.0" prefWidth="263.0" />
+        <VBox alignment="TOP_RIGHT" layoutX="263.0" layoutY="150.0" prefHeight="413.0" prefWidth="616.0">
+            <children>
+                <HBox prefHeight="24.0" prefWidth="616.0">
+                    <children>
+                        <Label disable="true" prefHeight="34.0" prefWidth="90.0" text="From:">
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="17.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                  <TextArea fx:id="from" prefHeight="34.0" prefWidth="489.0" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="24.0" prefWidth="616.0">
+                    <children>
+                        <Label disable="true" prefHeight="34.0" prefWidth="90.0" text="to:">
+                            <font>
+                                <Font size="23.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="17.0" right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                  <TextArea fx:id="to" prefHeight="34.0" prefWidth="489.0" />
+                    </children>
+                </HBox>
+            <HBox prefHeight="2.0" prefWidth="616.0">
+               <children>
+                  <Label disable="true" prefHeight="34.0" prefWidth="90.0" text="subject:">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="17.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextArea fx:id="subject" prefHeight="34.0" prefWidth="489.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="2.0" prefWidth="616.0">
+               <children>
+                  <Label disable="true" prefHeight="34.0" prefWidth="90.0" text="Date:">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="17.0" right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextArea fx:id="date" prefHeight="34.0" prefWidth="489.0" />
+               </children>
+            </HBox>
+                <Separator opacity="0.15" prefHeight="18.0" prefWidth="616.0" style="-fx-background-color: #da2f38;" />
+                <Group>
+                    <children>
+                        <TextArea fx:id="msg" editable="false" layoutY="65.0" prefHeight="219.0" prefWidth="616.0">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </TextArea>
+                        <ScrollBar fx:id="textScroll" layoutX="602.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="14.0" visible="false" />
+                    </children>
+                </Group>
+                <HBox fx:id="attachmentz" prefHeight="25.0" prefWidth="616.0">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="34.0">
+                     <image>
+                        <Image url="@../pix/Graphicloads-100-Flat-Attach-2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ComboBox fx:id="chooseAttach" prefWidth="150.0" promptText="choose attach......" />
+                  <Button fx:id="openAttac" mnemonicParsing="false" onAction="#openAttachments" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #da2f38;" text="open" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Uni Sans Heavy Italic" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+                </HBox>
+            </children>
+        </VBox>
+        <HBox layoutX="263.0" layoutY="102.0" prefHeight="39.0" prefWidth="616.0">
+         <children>
+            <Button fx:id="back" mnemonicParsing="false" onAction="#bk" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #da2f38;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Uni Sans Heavy Italic" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView id="silver" fx:id="unStar" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#setstar">
+               <image>
+                  <Image url="@../pix/Graphicloads-100-Flat-Favourite-.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <StackPane fx:id="str">
+               <children>
+                  <ImageView id="gold" fx:id="star" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#setUnStar">
+                     <image>
+                        <Image url="@../pix/Graphicloads-100-Flat-Favourite-2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </StackPane>
+            <ImageView fx:id="delete" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#trsh">
+               <image>
+                  <Image url="@../pix/Graphicloads-100-Flat-Recyclebin.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ComboBox fx:id="prior" prefHeight="39.0" prefWidth="87.0" promptText="Flag" visibleRowCount="4" />
+            <Button fx:id="changePri" mnemonicParsing="false" onAction="#changPri" prefHeight="39.0" prefWidth="82.0" style="-fx-background-color: #da2f38;" text="change flag" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Uni Sans Heavy Italic" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="move" fitHeight="39.0" fitWidth="39.0" onMouseClicked="#mov">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../pix/modules_orders.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ComboBox fx:id="foldersChoose" prefWidth="150.0" promptText="folders....." />
+         </children></HBox>
+        <Separator layoutX="263.0" layoutY="135.0" prefHeight="21.0" prefWidth="616.0" />
+    </children>
+</AnchorPane>
